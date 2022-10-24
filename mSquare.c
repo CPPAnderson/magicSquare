@@ -33,6 +33,20 @@ bool gameCheck(int array[3][3]){
     return false;
 }
 
+//function check, makes sure computer randomizies a number that hasn't been already chosen.
+bool check(int array2[9]){
+    for(int i = 0; i < 9; i++){
+        if (num == array2[i]){
+            num = random();
+            check(array2);
+        }
+        else if (i == 8){
+            return true;
+        }
+    }
+}
+
+
 
 int main(){
     srand((unsigned) time(&t)); 
