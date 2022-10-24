@@ -6,6 +6,11 @@
 time_t t;
 int num;
 
+//random function returns a random int number once called
+int random(){
+    return ((rand() % 9) + 1);
+}
+
 
 
 int main(){
