@@ -46,7 +46,12 @@ bool check(int array2[9]){
     }
 }
 
-
+//function printBoard, just prints the board
+void printBoard(int array[3][3]){
+    printf("[%d %d %d]\n", array[0][0], array[1][0], array[2][0]);
+    printf("[%d %d %d]\n", array[0][1], array[1][1], array[2][1]);
+    printf("[%d %d %d]\n", array[0][2], array[1][2], array[2][2]);
+}
 
 int main(){
     srand((unsigned) time(&t)); 
