@@ -58,6 +58,30 @@ int main(){
     int array[3][3];
     int acount;
     
-    
+    //loop that gives every open spot with the double array a random number that is generated
+    while (true){
+        //single array makes sure number hasn't already been called
+        int array2[9] = {10, 10, 10, 10, 10, 10, 10, 10, 10};
+        int count = 0;
+        for (int y = 0; y < 3; y++){
+            for (int x = 0; x < 3; x++){
+                
+                num = random();
+                if (check(array2) == true){
+                    array[x][y] = num;
+                    array2[count] = num;
+                    count++;
+                }
+                 
+            }
+        }
+        // if everything added up to 15, game is over and prints out board along with how many overall counts
+        if (gameCheck(array) == true){
+            printBoard(array);
+            printf("count: %d\n", acount);
+            return 0;
+        }
+         acount++;           
+    }
 
 }
